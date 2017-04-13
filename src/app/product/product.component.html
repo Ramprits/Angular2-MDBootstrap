@@ -1,3 +1,28 @@
-<p>
-  product works!
-</p>
+<table class="table">
+  <thead class="text-primary">
+    <tr>
+      <td>Product ID</td>
+      <td>Name</td>
+      <td>Product Number</td>
+      <td>Color</td>
+      <td>Safety Stock Level</td>
+      <td>Reorder Point</td>
+      <td>Standard Cost</td>
+      <td>List Price</td>
+      <td>Modified Date</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of ProductList">
+      <td>{{product.ProductID}}</td>
+      <td>{{product.Name}}</td>
+      <td>{{product.ProductNumber}}</td>
+      <td>{{product.Color}}</td>
+      <td>{{product.SafetyStockLevel}}</td>
+      <td>{{product.ReorderPoint}}</td>
+      <td>${{product.StandardCost}}</td>
+      <td>{{product.ListPrice}}</td>
+      <td>{{product.ModifiedDate | date}}</td>
+    </tr>
+  </tbody>
+</table>

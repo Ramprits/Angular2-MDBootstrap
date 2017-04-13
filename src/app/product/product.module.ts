@@ -13,3 +13,14 @@ import { Productroutes } from 'app/product/product.router';
 })
 // tslint:disable-next-line:eofline
 export class ProductModule { }
+export interface IProduct {
+     ProductID: number;
+     Name: string;
+     ProductNumber: string;
+     Color: string;
+     SafetyStockLevel: string;
+     ReorderPoint: string;
+     StandardCost: string;
+     ListPrice: string;
+     ModifiedDate: string;
+}

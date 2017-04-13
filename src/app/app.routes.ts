@@ -3,7 +3,7 @@ import { WelcomeComponent } from 'app/welcome/welcome.component';
 
 export const Approutes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'product', loadChildren: 'src/app/product.module#ProductModule' },
+  { path: 'product', loadChildren: 'app/product/product.module#ProductModule' },
   { path: '', redirectTo: '/welcome', pathMatch: 'full' }
 ];
 

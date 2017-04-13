@@ -1,3 +1,4 @@
+import './rxjs.extension';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -8,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { Approutes } from 'app/app.routes';
+import { ProductService } from "app/product/product.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { Approutes } from 'app/app.routes';
     HttpModule,
     RouterModule.forRoot(Approutes)
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
