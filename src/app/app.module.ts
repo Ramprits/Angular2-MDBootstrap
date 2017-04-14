@@ -9,13 +9,16 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { Approutes } from 'app/app.routes';
-import { ProductService } from "app/product/product.service";
+import { ProductService } from 'app/product/product.service';
+import { EventService } from 'app/event/event.service';
+import { ContactComponent } from 'app/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { ProductService } from "app/product/product.service";
     HttpModule,
     RouterModule.forRoot(Approutes)
   ],
-  providers: [ProductService],
+  providers: [ProductService, EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
