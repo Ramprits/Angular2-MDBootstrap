@@ -3,7 +3,7 @@ import { IEvent } from 'app/event/IEvent';
 
 @Injectable()
 export class EventService {
-     EVENTS: IEvent[];
+     EVENTS: any[];
      constructor() { }
      getEvents() {
           // tslint:disable-next-line:no-use-before-declare

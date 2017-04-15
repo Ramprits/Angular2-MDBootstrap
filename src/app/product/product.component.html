@@ -1,5 +1,5 @@
-<table class="table">
-  <thead class="text-primary">
+<table class="table table-bordered">
+  <thead class="text-primary bg-danger">
     <tr>
       <td>Product ID</td>
       <td>Name</td>
@@ -7,8 +7,6 @@
       <td>Color</td>
       <td>Safety Stock Level</td>
       <td>Reorder Point</td>
-      <td>Standard Cost</td>
-      <td>List Price</td>
       <td>Modified Date</td>
     </tr>
   </thead>
@@ -20,8 +18,6 @@
       <td>{{product.Color}}</td>
       <td>{{product.SafetyStockLevel}}</td>
       <td>{{product.ReorderPoint}}</td>
-      <td>${{product.StandardCost}}</td>
-      <td>{{product.ListPrice}}</td>
       <td>{{product.ModifiedDate | date}}</td>
     </tr>
   </tbody>

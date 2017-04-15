@@ -8,7 +8,7 @@ import { IEvent } from 'app/event/IEvent';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent implements OnInit {
-    eventList: IEvent[];
+    eventList: any[];
 
   constructor(private eventService: EventService) { }
 
