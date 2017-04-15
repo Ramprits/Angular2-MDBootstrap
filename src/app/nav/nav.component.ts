@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'app/user/auth.service';
+import { IUser } from 'app/user/IUser';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
   }
 
+  // tslint:disable-next-line:eofline
 }

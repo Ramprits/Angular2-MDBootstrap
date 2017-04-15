@@ -1,0 +1,21 @@
+<h1>New Employee</h1>
+<hr>
+<div class="col-md-4">
+  <form #saveEmployee="ngForm" (ngSubmit)="AddEmployee(saveEmployee.value)" autocomplete="off">
+    <div class="form-group">
+      <input type="text" (ngModel)="firstName" name="firstName" id="firstName" class="form-control" placeholder="Please eneter first name"
+        aria-describedby="Please eneter first name">
+    </div>
+    <div class="form-group">
+      <input type="text" (ngModel)="lastName" name="lastName" id="lastName" class="form-control" placeholder="Please eneter last name"
+        aria-describedby="Please eneter last name">
+    </div>
+    <div class="form-group">
+      <input type="email" (ngModel)="email" name="email" id="email" class="form-control" placeholder="Please eneter email" aria-describedby="Please eneter email">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-sm waves-effect">Save</button>
+      <button type="button" class="btn btn-danger btn-sm waves-effect" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>

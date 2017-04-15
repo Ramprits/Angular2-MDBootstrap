@@ -12,6 +12,7 @@ import { Approutes } from 'app/app.routes';
 import { ProductService } from 'app/product/product.service';
 import { EventService } from 'app/event/event.service';
 import { ContactComponent } from 'app/contact/contact.component';
+import { AuthService } from 'app/user/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ContactComponent } from 'app/contact/contact.component';
     HttpModule,
     RouterModule.forRoot(Approutes)
   ],
-  providers: [ProductService, EventService],
+  providers: [ProductService, EventService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

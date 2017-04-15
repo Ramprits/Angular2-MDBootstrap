@@ -7,7 +7,8 @@ export const Approutes: Routes = [
   { path: 'product', loadChildren: 'app/product/product.module#ProductModule' },
   { path: 'event', loadChildren: 'app/event/event.module#EventModule' },
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'user', loadChildren: 'app/user/user.module#UserModule' }
 ];
 
 export const AppRoutes = RouterModule.forChild(Approutes);

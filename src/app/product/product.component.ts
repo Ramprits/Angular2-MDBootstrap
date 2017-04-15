@@ -17,4 +17,5 @@ export class ProductComponent implements OnInit {
     });
   }
 
+// tslint:disable-next-line:eofline
 }
