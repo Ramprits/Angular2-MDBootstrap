@@ -1,22 +1,49 @@
-
+<!--Form with header-->
+<br>
+<br>
 <div class="row">
   <div class="col-md-2"></div>
-  <div class="col-md-4">
-    <h1>Login</h1>
-    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" autocomplete="off" novalidate>
-      <div class="form-group">
-        <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.userName?.touched" class="pull-right">Required</em>
-        <input id="userName" name="userName" (ngModel)="userName" required type="text" class="form-control" placeholder="User Name..."
-        />
-      </div>
-      <div class="form-group">
-        <em *ngIf="loginForm.controls.password?.invalid && loginForm.controls.password?.touched" class="pull-right">Required</em>
-        <input id="password" name="password" (ngModel)="password" required type="password" class="form-control" placeholder="Password..."
-        />
+
+  <form #loginForm="ngForm" class="col-md-4 form-horizontal" (ngSubmit)="login(loginForm.value)" autocomplete="off" novalidate>
+    <div class="card">
+      <div class="card-block">
+
+        <!--Header-->
+        <div class="form-header  purple darken-4">
+          <h3><i class="fa fa-lock"></i> Login:</h3>
+        </div>
+        <!--Body-->
+        <div class="md-form">
+          <i class="fa fa-envelope prefix"></i>
+          <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.userName?.touched" class="pull-right">Required</em>
+          <input id="userName" name="userName" (ngModel)="userName" required type="text" class="form-control">
+          <label for="form2">UserName</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fa fa-lock prefix"></i>
+          <em *ngIf="loginForm.controls.password?.invalid && loginForm.controls.password?.touched" class="pull-right">Required</em>
+          <input id="password" name="password" (ngModel)="password" required type="password" class="form-control">
+          <label for="form4">password</label>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary btn-sm">Login</button>
+          <button type="button" class="btn btn-danger btn-sm">Cancel</button>
+        </div>
+
       </div>
 
-      <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary btn-sm">Login</button>
-      <button type="button" class="btn btn-danger btn-sm">Cancel</button>
-    </form>
-  </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <div class="options">
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <!--Facebook-->
+          <button type="button" class="btn btn-sm btn-primary"><i class="fa fa-facebook"></i> Facebook</button>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
+<!--/Form with header-->
