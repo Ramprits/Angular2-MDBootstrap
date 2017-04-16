@@ -1,7 +1,7 @@
 import './rxjs.extension';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -25,6 +25,7 @@ import { AuthService } from 'app/user/auth.service';
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(Approutes)
   ],
   providers: [ProductService, EventService, AuthService],
