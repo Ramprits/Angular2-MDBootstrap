@@ -12,8 +12,7 @@ export class AuthService {
                userName: userName,
                firstName: 'John',
                lastName: 'Papa'
-          // tslint:disable-next-line:semicolon
-          }
+          };
      }
 
      isAuthenticated() {
