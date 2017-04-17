@@ -1,22 +1,23 @@
 <!--Panel-->
 <div class="row">
   <div class="col-md-4 animated slideInLeft" *ngFor="let event of eventList">
-    <div class="card" style="height: 250px;">
-      <h3 class="card-header primary-color white-text text-capitalize	">{{event?.name }}</h3>
-      <div class="card-block">
-        <h4 class="card-title">{{event?.name }}</h4>
+    <div class="card" style="height: 350px;">
+      <img [src]="event?.imageUrl" [alt]="event?.name" class="img" style="height: 100px; width: 100px;">
+      <h3 class="card-header primary-color white-text text-capitalize ">{{event?.name }}</h3>
+      <div class="card-block ">
+        <h4 class="card-title ">{{event?.name }}</h4>
         <div>Date: {{event?.date | date:'shortDate'}}</div>
-        <div [ngSwitch]="event?.time">Time: {{event?.time}}
-          <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
-          <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
+        <div [ngSwitch]="event?.time ">Time: {{event?.time}}
+          <span *ngSwitchCase=" '8:00 am' ">(Early Start)</span>
+          <span *ngSwitchCase=" '10:00 am' ">(Late Start)</span>
           <span *ngSwitchDefault>(Normal Start)</span>
         </div>
-        <div>Price:<span class="text-danger"> {{event?.price | currency:'USD':true}}</span></div>
-        <div [hidden]="!event?.location">
+        <div>Price:<span class="text-danger "> {{event?.price | currency:'USD':true}}</span></div>
+        <div [hidden]="!event?.location ">
           <span>Location: {{event?.location?.address}}</span>
-          <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
+          <span class="pad-left ">{{event?.location?.city}}, {{event?.location?.country}}</span>
         </div>
-        <div [hidden]="!event?.onlineUrl">
+        <div [hidden]="!event?.onlineUrl ">
           Online Url: {{event?.onlineUrl}}
         </div>
       </div>
