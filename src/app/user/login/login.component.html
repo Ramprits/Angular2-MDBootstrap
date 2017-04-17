@@ -13,21 +13,19 @@
         <!--Body-->
         <div class="md-form">
           <i class="fa fa-envelope prefix"></i>
-          <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.userName?.touched" class="pull-right">Required</em>
-          <input id="userName" name="userName" (ngModel)="userName" required type="text" class="form-control">
-          <label for="form2">UserName</label>
+          <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.userName?.touched" class="pull-right animated slideInLeft">Required</em>
+          <input id="userName" placeholder="User Name" name="userName" (ngModel)="userName" required type="text" class="form-control">
         </div>
 
         <div class="md-form">
           <i class="fa fa-lock prefix"></i>
-          <em *ngIf="loginForm.controls.password?.invalid && loginForm.controls.password?.touched" class="pull-right">Required</em>
-          <input id="password" name="password" (ngModel)="password" required type="password" class="form-control">
-          <label for="form4">password</label>
+          <em *ngIf="loginForm.controls.password?.invalid && loginForm.controls.password?.touched" class="pull-right animated slideInLeft">Required</em>
+          <input id="password" placeholder="Password" name="password" (ngModel)="password" required type="password" class="form-control">
         </div>
 
         <div class="text-center">
           <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary btn-sm">Login</button>
-          <button type="button" class="btn btn-danger btn-sm">Cancel</button>
+          <button type="button" class="btn btn-danger btn-sm" (click)="cancel()">Cancel</button>
         </div>
 
       </div>

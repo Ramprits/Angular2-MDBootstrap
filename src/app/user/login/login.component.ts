@@ -17,5 +17,6 @@ export class LoginComponent implements OnInit {
     this.authService.loginUser(formValues.userName, formValues.password);
     this.router.navigate(['/welcome']);
   }
+  cancel() { this.router.navigate(['/welcome']); }
   // tslint:disable-next-line:eofline
 }
