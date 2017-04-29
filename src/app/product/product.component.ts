@@ -9,6 +9,8 @@ import { ProductService } from 'app/product/product.service';
 })
 export class ProductComponent implements OnInit {
   ProductList: IProduct[];
+
+  public value: Date = new Date();
   constructor(private productService: ProductService) { }
   ngOnInit() {
     return this.productService.GetProducts().subscribe(product => {

@@ -13,19 +13,31 @@ import { ProductService } from 'app/product/product.service';
 import { EventService } from 'app/event/event.service';
 import { ContactComponent } from 'app/contact/contact.component';
 import { AuthService } from 'app/user/auth.service';
+// Import the Animations module
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Import the ButtonsModule
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { CustomersComponent } from "app/customers/customers.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     WelcomeComponent,
-    ContactComponent
+    ContactComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ButtonsModule,
+    GridModule,
+    DateInputsModule,
     RouterModule.forRoot(Approutes)
   ],
   providers: [ProductService, EventService, AuthService],
