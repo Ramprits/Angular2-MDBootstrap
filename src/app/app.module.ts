@@ -20,6 +20,8 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { CustomersComponent } from "app/customers/customers.component";
+import { EventComponent } from "app/event/event.component";
+import { EventDetailComponent } from "app/event/event-Detail/event-Detail.component";
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CustomersComponent } from "app/customers/customers.component";
     NavComponent,
     WelcomeComponent,
     ContactComponent,
-    CustomersComponent
+    CustomersComponent,
+    EventComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,

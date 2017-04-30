@@ -1,7 +1,6 @@
-<!--Panel-->
-<div class="row" [routerLink]="['eventList,eventList:id']">
-    <div class="col-md-4 animated slideInLeft" *ngFor="let event of eventList">
-        <div class="card" style="height: 350px;">
+<div class="row">
+    <div class="col-md-4 animated slideInLeft" *ngFor="let event of events">
+        <div class="card" style="height: 350px;" [routerLink]="['/events', event.id]">
             <img [src]="event?.imageUrl" [alt]="event?.name" class="img" style="height: 100px; width: 100px;">
             <h3 class="card-header primary-color white-text text-capitalize ">{{event?.name }}</h3>
             <div class="card-block ">

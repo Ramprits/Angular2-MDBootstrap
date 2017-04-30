@@ -8,14 +8,14 @@ import { IEvent } from 'app/event/IEvent';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent implements OnInit {
-  eventList: IEvent[];
+  events: IEvent[];
 
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
     this.eventService.getEvents().subscribe(event => {
       // tslint:disable-next-line:no-trailing-whitespace
-      this.eventList = event;
+      this.events = event;
     });
   }
 

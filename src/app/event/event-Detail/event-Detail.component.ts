@@ -10,13 +10,13 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./event-Detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
-  eventDetail: IEvent;
+  event: IEvent;
 
-  constructor(private eventService: EventService, private router: ActivatedRoute) { }
+  constructor(private eventService: EventService,
+    private router: ActivatedRoute) { }
 
   ngOnInit() {
-    this.eventDetail = this.eventService.getEvent(this.router.params['id']);
+    this.event = this.eventService.getEvent(+this.router.snapshot.params['id']);
   }
-
   // tslint:disable-next-line:eofline
 }
