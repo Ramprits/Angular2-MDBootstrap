@@ -9,14 +9,16 @@ import { IEvent } from 'app/event/IEvent';
 })
 export class EventComponent implements OnInit {
   events: IEvent[];
-
+  public Show: boolean = true;
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
-    this.eventService.getEvents().subscribe(event => {
+    this.Show = true;
+    this.eventService.getEvents().subscribe(events => {
       // tslint:disable-next-line:no-trailing-whitespace
-      this.events = event;
+      this.events = events;
     });
+     this.Show = false;
   }
 
   // tslint:disable-next-line:eofline

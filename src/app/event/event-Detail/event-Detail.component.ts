@@ -21,6 +21,7 @@ export class EventDetailComponent implements OnInit {
   }
 
   onButtonClick() {
+    window.confirm('Are you sure want to go there !');
     this.route.navigate(['/events']);
   }
   // tslint:disable-next-line:eofline

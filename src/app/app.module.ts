@@ -22,6 +22,7 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { CustomersComponent } from "app/customers/customers.component";
 import { EventComponent } from "app/event/event.component";
 import { EventDetailComponent } from "app/event/event-Detail/event-Detail.component";
+import { EventSessionList } from "app/event/event-Detail/event-session";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EventDetailComponent } from "app/event/event-Detail/event-Detail.compon
     ContactComponent,
     CustomersComponent,
     EventComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    EventSessionList
   ],
   imports: [
     BrowserModule,
