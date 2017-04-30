@@ -9,7 +9,7 @@ import { customers } from "app/customers/customers";
 export class CustomersComponent implements OnInit {
 
     constructor() { }
-    private gridData: any[] = customers;
+    public gridData: any[] = customers;
     ngOnInit() {
 
     }

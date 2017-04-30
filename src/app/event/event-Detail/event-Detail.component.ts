@@ -13,10 +13,15 @@ export class EventDetailComponent implements OnInit {
   event: IEvent;
 
   constructor(private eventService: EventService,
-    private router: ActivatedRoute) { }
+    private router: ActivatedRoute, private route: Router
+  ) { }
 
   ngOnInit() {
     this.event = this.eventService.getEvent(+this.router.snapshot.params['id']);
+  }
+
+  onButtonClick() {
+    this.route.navigate(['/events']);
   }
   // tslint:disable-next-line:eofline
 }
